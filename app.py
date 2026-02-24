@@ -121,8 +121,8 @@ for i in range(num_qubits - 1):
 
 qc.measure(range(num_qubits), range(num_qubits))
 
-st.subheader("Quantum Circuit")
-st.pyplot(qc.draw(output="mpl"))
+st.subheader("Quantum Circuit (Text Representation)")
+st.text(qc.draw(output="text"))
 
 backend = AerSimulator()
 job = backend.run(qc, shots=1024)
